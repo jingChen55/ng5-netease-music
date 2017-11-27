@@ -1,0 +1,14 @@
+.main {
+  height: calc(100% - 60px - 64px - 17px);
+  &-side {
+    float: left;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid rgb(222, 222, 222);
+  }
+  &-content {
+    float: left;
+    width: calc(100% - 201px);
+    height: 100%;
+  }
+}
