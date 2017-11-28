@@ -25,7 +25,7 @@ function createWindow() {
     minWidth: defaultWidth,
     minHeight: defaultHeight,
     frame: false,
-    title: 'NG5 Netease Music'
+    title: '网易云音乐'
   });
 
   // and load the index.html of the app.
