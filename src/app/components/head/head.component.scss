@@ -143,6 +143,7 @@
     }
   }
   &-user {
+    display: none;
     float: right;
     width: 65px;
     position: relative;
@@ -168,7 +169,7 @@
       top: 35px;
       left: -211px;
       width: 250px;
-      height: 165px;
+      height: 265px;
       background: #fff;
       border: 1px solid rgb(195, 195, 195);
       border-top: none;
@@ -176,6 +177,93 @@
       box-shadow: 0 0 10px rgba(119, 119, 119, 0.5);
       &:before {
         // todo 小三角
+      }
+    }
+    .detail {
+      &-profile {
+        padding: 20px 20px 17px 70px;
+        vertical-align: middle;
+        img {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 40px;
+          border-radius: 50%;
+        }
+        span {
+          font-weight: lighter;
+          display: inline-block;
+          width: 100%;
+          font-size: 14px;
+          line-height: 40px;
+          color: rgb(72, 72, 72);
+        }
+      }
+      &-follows {
+        padding: 0 20px 13px 20px;
+        border-bottom: 1px solid rgb(237, 237, 237);
+        &-item {
+          float: left;
+          width: 65px;
+          font-size: 12px;
+          border-left: 1px solid rgb(225, 225, 225);
+          padding-left: 6px;
+          color: rgb(130, 130, 130);
+          font-weight: lighter;
+          b {
+            font-size: 13px;
+            color: rgb(34, 34, 34);
+          }
+          &:first-child{
+            border-left: none;
+            padding-left: 0;
+          }
+        }
+      }
+      &-list {
+        padding-top: 2px;
+        &-item {
+          padding: 0 40px 0 45px;
+          position: relative;
+          line-height: 32px;
+          font-size: 12px;
+          color: rgb(94, 94, 94);
+          font-weight: lighter;
+          cursor: pointer;
+          &:hover {
+            background: rgb(235, 235, 235);
+          }
+          &:last-child {
+            margin-top: 2px;
+            line-height: 36px;
+            border-top: 1px solid rgb(225, 225, 225);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            .detail-left-icon {
+              top: 10px;
+            }
+            .icon-right-arrow {
+              top: 12px;
+            }
+          }
+          .detail-tip {
+            float: right;
+            font-size: 11px;
+          }
+          .detail-left-icon {
+            position: absolute;
+            left: 20px;
+            top: 8px;
+          }
+          .icon-right-arrow {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+          }
+          .icon-phone {
+            left: 22px;
+          }
+        }
       }
     }
   }

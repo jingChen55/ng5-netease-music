@@ -109,3 +109,38 @@
     background-position: -13px -11px;
   }
 }
+
+.user-icon {
+  display: inline-block;
+  background: url('assets/imgs/user.png') no-repeat;
+  background-size: 138px 800px;
+  &.icon-vip {
+    width: 16px;
+    height: 14px;
+    background-position: -120px -681px;
+  }
+
+  &.icon-config {
+    width: 16px;
+    height: 16px;
+    background-position: -95px -705px;
+  }
+
+  &.icon-phone {
+    width: 12px;
+    height: 16px;
+    background-position: -122px -705px;
+  }
+
+  &.icon-logout {
+    width: 14px;
+    height: 14px;
+    background-position: -96px -681px;
+  }
+
+  &.icon-right-arrow {
+    width: 7px;
+    height: 10px;
+    background-position: -70px -709px;
+  }
+}
