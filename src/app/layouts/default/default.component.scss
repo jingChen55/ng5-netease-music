@@ -1,5 +1,5 @@
 .main {
-  height: calc(100% - 60px - 64px - 17px);
+  height: calc(100% - 60px - 64px);
   &-side {
     float: left;
     width: 200px;
@@ -10,5 +10,6 @@
     float: left;
     width: calc(100% - 201px);
     height: 100%;
+    background: #fff;
   }
 }

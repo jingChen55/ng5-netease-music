@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/scss/icon";
+
 html, body {
   margin: 0;
   padding: 0;
 
   height: 100%;
-  background: #fff;
-  font-size: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
-* { 
+* {
   margin: 0;
   right: 0;
   box-sizing: border-box;
@@ -26,4 +27,23 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgb(171, 171, 171);
+}
+
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::selection {
+  color: #fff;
+  background-color: rgba(102, 102, 102, 0.8);
 }

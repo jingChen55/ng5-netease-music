@@ -1,3 +1,49 @@
-<p>
-  side works!
-</p>
+<div class="side">
+  <div class="side-channel">
+    <div class="side-title">推荐</div>
+    <div class="side-list">
+      <div class="side-list-item" *ngFor="let item of suggests">
+        <i class="side-icon {{item.icon}}"></i>
+        <span class="hide-one">{{item.name}}</span>
+      </div>
+    </div>
+
+    <div class="side-title">我的音乐</div>
+    <div class="side-list">
+      <div class="side-list-item" *ngFor="let item of myMusics">
+        <i class="side-icon {{item.icon}}"></i>
+        <span class="hide-one">{{item.name}}</span>
+      </div>
+    </div>
+
+    <div class="side-title">创建的歌单</div>
+    <div class="side-list">
+      <div class="side-list-item" *ngFor="let item of created">
+        <i class="side-icon {{item.icon}}"></i>
+        <span class="hide-one">{{item.name}}</span>
+      </div>
+    </div>
+
+    <div class="side-title">收藏的歌单</div>
+    <div class="side-list">
+      <div class="side-list-item" *ngFor="let item of colletions">
+        <i class="side-icon {{item.icon}}"></i>
+        <span class="hide-one">{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-thumb">
+    <div class="side-thumb-img">
+      <img src="../../../assets/imgs/default_cover.png" alt="">
+    </div>
+    <div class="side-thumb-info">
+      <p class="side-thumb-name hide-one"><b>想把我唱给你听0老狼</b></p>
+      <p class="side-thumb-author hide-one">许巍</p>
+    </div>
+    <div class="side-thumb-actions">
+      <p><i class="btmbar-icon icon-delete"></i></p>
+      <p><i class="btmbar-icon icon-like"></i></p>
+    </div>
+  </div>
+</div>

@@ -23,14 +23,19 @@
     background-position: 0 -117px;
     margin: 0;
   }
-  &-logo, &-navi, .control, .icon-search, .icon-msg, .icon-setting {
-    background-image: url('../../../assets/imgs/topbar_2x.png');
+  .icon-expand {
+    background-position: -13px -57px;
+    width: 8px;
+    height: 4px;
+  }
+  &-logo, &-navi, .control, .icon-search, .icon-msg, .icon-setting, .icon-expand {
+    background-image: url('../../../assets/imgs/topbar.png');
     background-size: 206px 370px;
   }
   &-bar {
     width: 100%;
     height: 25px;
-    padding: 3px 8px;
+    padding: 3px 5px 3px 8px;
     &-controls {
       float: left;
       &:hover {
@@ -100,17 +105,18 @@
       }
     }
   }
-  &-tools { 
+  &-tools {
     float: right;
     width: 100px;
     padding-top: 5px;
     vertical-align: middle;
     height: 24px;
     position: relative;
+    text-align: right;
     .msg-number {
       position: absolute;
       top: -2px;
-      left: 12px;
+      left: 25px;
       color: rgb(183, 39, 18);
       border-radius: 8px;
       height: 16px;
@@ -133,6 +139,44 @@
       background-position: -74px -52px;
       width: 16px;
       height: 16px;
+      margin-right: 21px;
+    }
+  }
+  &-user {
+    float: right;
+    width: 65px;
+    position: relative;
+    &:hover {
+      .icon-expand {
+        background-position: -13px -78px;
+      }
+    }
+    &-avatar {
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      margin-top: 2px;
+      margin-left: 15px;
+    }
+    .icon-expand {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    &-detail {
+      position: absolute;
+      top: 35px;
+      left: -211px;
+      width: 250px;
+      height: 165px;
+      background: #fff;
+      border: 1px solid rgb(195, 195, 195);
+      border-top: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(119, 119, 119, 0.5);
+      &:before {
+        // todo 小三角
+      }
     }
   }
 }

@@ -25,7 +25,9 @@ function createWindow() {
     minWidth: defaultWidth,
     minHeight: defaultHeight,
     frame: false,
-    title: '网易云音乐'
+    title: '网易云音乐',
+    transparent: true,
+    hasShadow: true
   });
 
   // and load the index.html of the app.
