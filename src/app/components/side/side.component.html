@@ -2,7 +2,7 @@
   <div class="side-channel">
     <div class="side-title">推荐</div>
     <div class="side-list">
-      <div class="side-list-item" *ngFor="let item of suggests">
+      <div class="side-list-item" *ngFor="let item of suggests" (click)="goPage(item.route)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
       </div>
@@ -10,7 +10,7 @@
 
     <div class="side-title">我的音乐</div>
     <div class="side-list">
-      <div class="side-list-item" *ngFor="let item of myMusics">
+      <div class="side-list-item" *ngFor="let item of myMusics" (click)="goPage(item.route)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
       </div>

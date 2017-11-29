@@ -15,6 +15,10 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { HeadComponent } from './components/head/head.component';
 import { FootComponent } from './components/foot/foot.component';
 import { SideComponent } from './components/side/side.component';
+import { PersonalFmComponent } from './pages/personal-fm/personal-fm.component';
+import { FriendsComponent } from './pages/friends/friends.component';
+import { ItunesComponent } from './pages/itunes/itunes.component';
+import { MyRadioComponent } from './pages/my-radio/my-radio.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { SideComponent } from './components/side/side.component';
     DefaultComponent,
     HeadComponent,
     FootComponent,
-    SideComponent
+    SideComponent,
+    PersonalFmComponent,
+    FriendsComponent,
+    ItunesComponent,
+    MyRadioComponent
   ],
   imports: [
     BrowserModule,

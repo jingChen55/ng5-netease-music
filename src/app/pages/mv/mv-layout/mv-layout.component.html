@@ -1,0 +1,11 @@
+<div class="mv-layout">
+  <div class="mv-layout-navi">
+    <a *ngFor="let item of navis" [routerLink]="item.route" routerLinkActive="active">
+      {{item.name}}
+    </a>
+  </div>
+
+  <div class="mv-layout-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

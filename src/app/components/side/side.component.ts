@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side',
@@ -10,22 +11,22 @@ export class SideComponent implements OnInit {
     {
       name: '发现音乐',
       icon: 'icon-music',
-      url: ''
+      route: 'discover'
     },
     {
       name: '私人FM',
       icon: 'icon-fm',
-      url: ''
+      route: 'personal-fm'
     },
     {
       name: 'MV',
       icon: 'icon-mv',
-      url: ''
+      route: 'mv'
     },
     {
       name: '朋友',
       icon: 'icon-friends',
-      url: ''
+      route: 'friends'
     }
   ];
 
@@ -33,17 +34,17 @@ export class SideComponent implements OnInit {
     {
       name: 'iTunes音乐',
       icon: 'icon-itunes',
-      url: ''
+      route: 'itunes'
     },
     {
       name: '下载的音乐',
       icon: 'icon-download',
-      url: ''
+      route: 'download'
     },
     {
       name: '我的电台',
       icon: 'icon-radio',
-      url: ''
+      route: 'my-radio'
     }
   ];
 
@@ -133,9 +134,12 @@ export class SideComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  goPage(routeName: string): void {
+    this.router.navigate([routeName]);
+  }
 }

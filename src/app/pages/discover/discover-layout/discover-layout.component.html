@@ -1,0 +1,8 @@
+<ul class="discover-layout">
+  <li *ngFor="let item of channels">
+    <a [routerLink]="item.route" routerLinkActive="active">{{item.name}}</a>
+  </li>
+</ul>
+<div class="discover-content">
+  <router-outlet></router-outlet>
+</div>
