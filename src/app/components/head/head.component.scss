@@ -23,12 +23,12 @@
     background-position: 0 -117px;
     margin: 0;
   }
-  .icon-expand {
+  .icon-dropdown {
     background-position: -13px -57px;
     width: 8px;
     height: 4px;
   }
-  &-logo, &-navi, .control, .icon-search, .icon-msg, .icon-setting, .icon-expand {
+  &-logo, &-navi, .control, .icon-search, .icon-msg, .icon-setting, .icon-expand, .icon-dropdown {
     background-image: url('../../../assets/imgs/topbar.png');
     background-size: 206px 370px;
   }

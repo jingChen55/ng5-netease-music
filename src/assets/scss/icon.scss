@@ -108,6 +108,74 @@
     height: 14px;
     background-position: -13px -11px;
   }
+
+  &.icon-play {
+    width: 13px;
+    height: 15px;
+    background-position: -12px -46px;
+  }
+
+  &.icon-prev {
+    width: 10px;
+    height: 12px;
+    background-position: -19px -126px;
+  }
+
+  &.icon-next {
+    width: 10px;
+    height: 12px;
+    background-position: -18px -173px;
+  }
+
+  &.icon-volume-on {
+    width: 16px;
+    height: 12px;
+    background-position: 0 -290px;
+  }
+
+  &.icon-volume-off {
+    width: 16px;
+    height: 12px;
+    background-position: 0 -316px;
+  }
+
+  &.icon-random {
+    width: 16px;
+    height: 14px;
+    background-position: 0 -338px;
+  }
+
+  &.icon-loop {
+    width: 16px;
+    height: 14px;
+    background-position: 0 -338px;
+  }
+
+  &.icon-single {
+    width: 16px;
+    height: 14px;
+    background-position: 0 -388px;
+  }
+
+  &.icon-lyric {
+    width: 16px;
+    height: 16px;
+    background-position: -82px -286px;
+  }
+
+  &.icon-play-list {
+    width: 18px;
+    height: 13px;
+    background-position: 0 -444px;
+  }
+
+  &.icon-loading {
+    background: url('assets/imgs/loading.gif') no-repeat 0 0;
+    background-color: #fff;
+    background-size: 10px 10px;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .user-icon {

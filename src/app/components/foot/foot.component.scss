@@ -2,4 +2,183 @@
   height: 63px;
   border-top: 1px solid rgb(197, 197, 197);
   background: rgba(246, 246, 246, 0.98);
+  overflow: hidden;
+  position: relative;
+  &-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 200px;
+    height: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .control-prev, .control-next, .control-play, .control-pause {
+      cursor: pointer;
+      background: rgb(212, 60, 62);
+      border-radius: 50%;
+      text-align: center;
+      &.active {
+        background: rgb(154, 21, 26);
+      }
+    }
+    .control-prev, .control-next {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+    .control-play, .control-pause {
+      height: 36px;
+      width: 36px;
+      line-height: 38px;
+    }
+  }
+
+  &-progress {
+    width: 100%;
+    height: 100%;
+    padding: 0 380px 0 210px;
+    .progress {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &-dot {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        top: 24px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(89, 91, 102, 0.5);
+        z-index: 20;
+        &-ready {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          z-index: 21;
+          display: inline-block;
+          background: rgb(215, 26, 34);
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+        }
+        &.active {
+          background: rgb(229, 229, 229);
+        }
+        .icon-loading {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          z-index: 22;
+          border-radius: 50%;
+        }
+      }
+      &-line {
+        position: absolute;
+        top: 29px;
+        left: 0;
+        display: inline-block;
+        height: 4px;
+        border-radius: 2px;
+        &.full {
+          width: 100%;
+          background: rgb(195, 195, 195);
+          z-index: 10;
+        }
+        &.active {
+          width: 0;
+          z-index: 15;
+          background: rgb(215, 26, 34);
+        }
+      }
+    }
+  }
+
+  &-setting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 367px;
+    height: 100%;
+    line-height: 62px;
+    .setting {
+      &-time {
+        float: left;
+        width: 75px;
+        font-size: 12px;
+        color: rgb(136, 136, 136);
+      }
+      &-volume {
+        float: left;
+        width: 160px;
+        height: 100%;
+        padding: 0 20px;
+        .volume {
+          float: right;
+          width: 100px;
+          height: 100%;
+          position: relative;
+          &-dot {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            top: 26px;
+            left: 20px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 3px rgba(89, 91, 102, 0.5);
+            z-index: 20;
+          }
+          &-line {
+            position: absolute;
+            top: 29px;
+            left: 0;
+            display: inline-block;
+            height: 4px;
+            border-radius: 2px;
+            &.full {
+              width: 100%;
+              background: rgb(195, 195, 195);
+              z-index: 10;
+            }
+            &.active {
+              width: 0;
+              z-index: 15;
+              background: rgb(215, 26, 34);
+            }
+          }
+        }
+      }
+      &-other {
+        float: left;
+        width: 130px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .btmbar-icon {
+          margin-right: 15px;
+        }
+        .icon-play-list {
+          margin-right: 0;
+        }
+      }
+      &-list-number {
+        font-size: 10px;
+        color: #fff;
+        line-height: 1;
+        padding: 2px 5px 4px 5px;
+        font-style: normal;
+        border-radius: 8px;
+        background: rgb(197, 197, 197);
+        margin-left: 3px;
+      }
+    }
+  }
 }
