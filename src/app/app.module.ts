@@ -19,6 +19,8 @@ import { PersonalFmComponent } from './pages/personal-fm/personal-fm.component';
 import { FriendsComponent } from './pages/friends/friends.component';
 import { ItunesComponent } from './pages/itunes/itunes.component';
 import { MyRadioComponent } from './pages/my-radio/my-radio.component';
+import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
+import { MyMusicComponent } from './pages/my-music/my-music.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MyRadioComponent } from './pages/my-radio/my-radio.component';
     PersonalFmComponent,
     FriendsComponent,
     ItunesComponent,
-    MyRadioComponent
+    MyRadioComponent,
+    SongSheetComponent,
+    MyMusicComponent
   ],
   imports: [
     BrowserModule,

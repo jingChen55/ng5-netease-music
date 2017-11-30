@@ -4,7 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { PersonalFmComponent } from './pages/personal-fm/personal-fm.component';
-import { FriendsComponent} from './pages/friends/friends.component';
+import { FriendsComponent } from './pages/friends/friends.component';
+import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
+import { MyMusicComponent } from './pages/my-music/my-music.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
       {
         path: 'friends',
         component: FriendsComponent
+      },
+      {
+        path: 'song-sheet/:id',
+        component: SongSheetComponent
+      },
+      {
+        path: 'my-music',
+        component: MyMusicComponent
       }
     ]
   }

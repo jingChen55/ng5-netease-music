@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="side-title">我的音乐</div>
+    <div class="side-title" (click)="goPage('my-music')">我的音乐</div>
     <div class="side-list">
       <div class="side-list-item" *ngFor="let item of myMusics" (click)="goPage(item.route)">
         <i class="side-icon {{item.icon}}"></i>
@@ -18,7 +18,7 @@
 
     <div class="side-title">创建的歌单</div>
     <div class="side-list">
-      <div class="side-list-item" *ngFor="let item of created">
+      <div class="side-list-item" *ngFor="let item of created" (click)="goSongSheet(item.id)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
       </div>
@@ -26,7 +26,7 @@
 
     <div class="side-title">收藏的歌单</div>
     <div class="side-list">
-      <div class="side-list-item" *ngFor="let item of colletions">
+      <div class="side-list-item" *ngFor="let item of colletions" (click)="goSongSheet(item.id)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
       </div>

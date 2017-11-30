@@ -50,21 +50,25 @@ export class SideComponent implements OnInit {
 
   created = [
     {
+      id: 1,
       name: '我喜欢的音乐',
       icon: 'icon-like',
       url: ''
     },
     {
+      id: 2,
       name: '战车',
       icon: 'icon-list',
       url: ''
     },
     {
+      id: 3,
       name: '鸡血',
       icon: 'icon-list',
       url: ''
     },
     {
+      id: 4,
       name: '上班',
       icon: 'icon-list',
       url: ''
@@ -134,12 +138,18 @@ export class SideComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
   }
 
   goPage(routeName: string): void {
     this.router.navigate([routeName]);
+  }
+
+  // 携带id跳转到歌单页
+  goSongSheet(id): void {
+    this.router.navigate(['song-sheet', id]);
   }
 }
