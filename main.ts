@@ -39,7 +39,7 @@ function createWindow() {
   //   width: 350,
   //   height: 500
   // });
-  
+
   // loginWin.loadURL('file://' + __dirname + '/../login/index.html');
   // loginWin.once('ready-to-show', () => {
   //   loginWin.show()
@@ -49,7 +49,7 @@ function createWindow() {
 
   // Open the DevTools.
   if (serve) {
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
   }
 
   // Emitted when the window is closed.

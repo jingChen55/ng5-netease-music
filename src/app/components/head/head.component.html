@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="head-content clearfix">
-    <div class="head-logo"></div>
+    <a class="head-logo" routerLink="/"></a>
     <div class="head-navi"></div>
     <div class="head-search">
       <span class="icon-search"></span>
@@ -18,14 +18,15 @@
     </div>
 
     <div class="head-user">
-      <img class="head-user-avatar" src="../../../assets/imgs/default_avatar.jpg" alt="">
+      <img class="head-user-avatar" [src]="detail?.profile?.avatarUrl" alt="">
       <i class="icon-dropdown"></i>
 
       <!--用户详细信息-->
       <div class="head-user-detail">
         <div class="detail-profile">
-          <img src="../../../assets/imgs/default_avatar.jpg" alt="">
-          <span class="hide-one" (click)="openLogin()">远哥碉堡了</span>
+          <img [src]="detail?.profile?.avatarUrl" alt="">
+          <!--<img src="../../../assets/imgs/default_avatar.jpg" alt="">-->
+          <span class="hide-one">远哥碉堡了</span>
         </div>
         <div class="detail-follows clearfix">
           <div class="detail-follows-item">

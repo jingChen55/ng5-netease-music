@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { State } from '../../store/index';
 
 @Component({
   selector: 'app-side',
@@ -7,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./side.component.scss']
 })
 export class SideComponent implements OnInit {
+  userPlayList: any;
   suggests = [
     {
       name: '发现音乐',
@@ -48,100 +51,30 @@ export class SideComponent implements OnInit {
     }
   ];
 
-  created = [
-    {
-      id: 1,
-      name: '我喜欢的音乐',
-      icon: 'icon-like',
-      url: ''
-    },
-    {
-      id: 2,
-      name: '战车',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      id: 3,
-      name: '鸡血',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      id: 4,
-      name: '上班',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: 'RUNNING',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '念佛三味',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '佛说万物生',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '心中的菩提',
-      icon: 'icon-list',
-      url: ''
-    }
-  ];
+  // 创建的歌单
+  created = [];
 
-  colletions = [
-    {
-      name: 'Hard Trap|暴躁的高频Bass硬陷阱',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '如是我闻—寺院版',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '程序员的音符',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '『韩语』夜跑必备节奏超强',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '跑步时听的兴奋剂',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '燃烧吧代码! // <程序员专属歌单>',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '打了鸡血的程序猿 背景纯音乐',
-      icon: 'icon-list',
-      url: ''
-    },
-    {
-      name: '华语乐坛，一人一种撕心裂肺。',
-      icon: 'icon-list',
-      url: ''
-    },
-  ];
+  // 收藏的歌单
+  colletions = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private store: Store<State>) {
   }
 
   ngOnInit() {
+    this.userPlayList = this.store.select('user').subscribe((userState: any) => {
+      if (userState) {
+        const { userPlayList } = userState;
+        userPlayList.map(item => {
+          if (item.subscribed) {
+            item.icon = 'icon-list';
+            this.colletions.push(item);
+          } else {
+            item.icon = item.specialType === 0 ? 'icon-list' : 'icon-like';
+            this.created.push(item);
+          }
+        })
+      }
+    });
   }
 
   goPage(routeName: string): void {

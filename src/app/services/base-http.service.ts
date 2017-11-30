@@ -7,6 +7,7 @@ export abstract class BaseHttpService {
   private headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8' });
   private http: Http;
   private host = 'http://47.93.196.88:3000/';
+  protected dev = true; // 如果为true, 走mock数据
 
   constructor(private baseInjector: Injector) {
     this.http = this.baseInjector.get(Http);

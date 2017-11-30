@@ -16,16 +16,16 @@
       </div>
     </div>
 
-    <div class="side-title">创建的歌单</div>
-    <div class="side-list">
+    <div class="side-title" *ngIf="created.length">创建的歌单</div>
+    <div class="side-list" *ngIf="created.length">
       <div class="side-list-item" *ngFor="let item of created" (click)="goSongSheet(item.id)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
       </div>
     </div>
 
-    <div class="side-title">收藏的歌单</div>
-    <div class="side-list">
+    <div class="side-title" *ngIf="colletions.length">收藏的歌单</div>
+    <div class="side-list" *ngIf="colletions.length">
       <div class="side-list-item" *ngFor="let item of colletions" (click)="goSongSheet(item.id)">
         <i class="side-icon {{item.icon}}"></i>
         <span class="hide-one">{{item.name}}</span>
