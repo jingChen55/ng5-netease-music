@@ -10,6 +10,6 @@ export class SuggestComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }

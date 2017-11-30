@@ -148,7 +148,7 @@
   &.icon-loop {
     width: 16px;
     height: 14px;
-    background-position: 0 -338px;
+    background-position: 0 -362px;
   }
 
   &.icon-single {
@@ -157,10 +157,16 @@
     background-position: 0 -388px;
   }
 
-  &.icon-lyric {
+  &.icon-lyric-on {
     width: 16px;
     height: 16px;
     background-position: -82px -286px;
+  }
+
+  &.icon-lyric-off {
+    width: 16px;
+    height: 16px;
+    background-position: -82px -316px;
   }
 
   &.icon-play-list {

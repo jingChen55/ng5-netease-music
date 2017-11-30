@@ -9,6 +9,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { Store, StoreModule } from '@ngrx/store';
+import { reducers, initialState } from './store/index';
+
 import { ElectronService } from './services/electron.service';
 import { FullComponent } from './layouts/full/full.component';
 import { DefaultComponent } from './layouts/default/default.component';
@@ -21,6 +24,7 @@ import { ItunesComponent } from './pages/itunes/itunes.component';
 import { MyRadioComponent } from './pages/my-radio/my-radio.component';
 import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
 import { MyMusicComponent } from './pages/my-music/my-music.component';
+import { InitAppComponent } from './pages/init-app/init-app.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +39,15 @@ import { MyMusicComponent } from './pages/my-music/my-music.component';
     ItunesComponent,
     MyRadioComponent,
     SongSheetComponent,
-    MyMusicComponent
+    MyMusicComponent,
+    InitAppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, <any>initialState)
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]

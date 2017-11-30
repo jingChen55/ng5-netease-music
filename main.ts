@@ -1,7 +1,8 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
+import { Browser } from 'selenium-webdriver';
 
-let win, serve;
+let win, loginWin, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
@@ -30,12 +31,25 @@ function createWindow() {
     hasShadow: true
   });
 
+  // loginWin = new BrowserWindow({
+  //   center: true,
+  //   parent: win,
+  //   frame: false,
+  //   show: false,
+  //   width: 350,
+  //   height: 500
+  // });
+  
+  // loginWin.loadURL('file://' + __dirname + '/../login/index.html');
+  // loginWin.once('ready-to-show', () => {
+  //   loginWin.show()
+  // });
   // and load the index.html of the app.
   win.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
   if (serve) {
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
   }
 
   // Emitted when the window is closed.
@@ -44,6 +58,7 @@ function createWindow() {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null;
+    loginWin = null;
   });
 }
 
