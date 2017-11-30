@@ -9,7 +9,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { ElectronService } from './providers/electron.service';
+import { ElectronService } from './services/electron.service';
 import { FullComponent } from './layouts/full/full.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { HeadComponent } from './components/head/head.component';
