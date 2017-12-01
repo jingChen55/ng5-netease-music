@@ -1,3 +1,92 @@
+.topbar-icon {
+  display: inline-block;
+  background: url('assets/imgs/topbar.png');
+  background-size: 206px 370px;
+  &.icon-prev {
+    background-position: 0 -240px;
+    width: 26px;
+    height: 24px;
+    &:not(.disabled):active {
+      background-position: 0 -300px;
+    }
+    &.disabled {
+      background-position: 0 -330px;
+    }
+  }
+
+  &.icon-next {
+    background-position: -26px -240px;
+    width: 27px;
+    height: 24px;
+    &:not(.disabled):active {
+      background-position: -26px -300px;
+    }
+    &.disabled {
+      background-position: -26px -330px;
+    }
+  }
+
+  &.icon-logo {
+    background-position: 0 -184px;
+    width: 138px;
+    height: 24px;
+  }
+
+  &.icon-search {
+    background-position: -1px 0;
+    width: 14px;
+    height: 14px;
+  }
+
+  &.icon-close {
+    width: 12px;
+    height: 12px;
+    background-position: -86px -120px;
+  }
+
+  &.icon-mini {
+    width: 12px;
+    height: 12px;
+    background-position: -41px -120px;
+  }
+
+  &.icon-expand {
+    width: 12px;
+    height: 12px;
+    background-position: -64px -120px;
+  }
+
+  &.icon-scale {
+    width: 14px;
+    height: 12px;
+    background-position: 0 -117px;
+  }
+
+  &.icon-msg {
+    width: 18px;
+    height: 14px;
+    background-position: -39px -53px;
+    &:active {
+      background-position: -39px -95px;
+    }
+  }
+
+  &.icon-setting {
+    width: 16px;
+    height: 16px;
+    background-position: -74px -52px;
+    &:active {
+      background-position: -74px -94px;
+    }
+  }
+
+  &.icon-dropdown {
+    width: 8px;
+    height: 4px;
+    background-position: -13px -57px;
+  }
+}
+
 .side-icon {
   display: inline-block;
   background: url('assets/imgs/sidebar.png');

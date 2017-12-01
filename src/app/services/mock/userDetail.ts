@@ -47,43 +47,44 @@ export default {
   "mobileSign": false,
   "pcSign": false,
   "peopleCanSeeMyPlayRecord": true,
-  "bindings": [{
-    "expiresIn": 2147483647,
-    "refreshTime": 1476625733,
-    "expired": false,
-    "tokenJsonStr": "{\"countrycode\":\"\",\"cellphone\":\"15800651893\",\"hasPassword\":true}",
-    "url": "",
-    "userId": 333779440,
-    "id": 2910254411,
-    "type": 1
-  }, {
-    "expiresIn": 604799,
-    "refreshTime": 1485077072,
-    "expired": true,
-    "tokenJsonStr": "{\"access_token\":\"e317002db301e4f4a94500891905aedc\",\"douban_user_id\":\"145986143\",\"refresh_token\":\"3464b8e48f8e22dc9d2e2aadaeaa6894\",\"douban_user_name\":\"Hello World\",\"expires_in\":604799}",
-    "url": "http://www.douban.com/people/145986143",
-    "userId": 333779440,
-    "id": 2966606805,
-    "type": 3
-  }, {
-    "expiresIn": 7776000,
-    "refreshTime": 1479447752,
-    "expired": true,
-    "tokenJsonStr": "{\"access_token\":\"F880EB270279287FB503388EC54DFA68\",\"refresh_token\":\"1A524FDB7EF82BC993265D061CF5F3BE\",\"openid\":\"B3E86535F0863965E86C7F30472CF7CB\",\"nickname\":\"莲安东路的日子\",\"expires_in\":7776000}",
-    "url": "",
-    "userId": 333779440,
-    "id": 2899342281,
-    "type": 5
-  }, {
-    "expiresIn": 7200,
-    "refreshTime": 1511751872,
-    "expired": true,
-    "tokenJsonStr": "{\"access_token\":\"4_s_0aHlMToYBCzATe_xgdZ3O4kRnaF2ZsIA_dymGeacy59q3fiyEfnTVELdRcJn77cVu649TKn8Z4qYlMIWIttQ\",\"expires_in\":7200,\"refresh_token\":\"4_wekvtGHjZByXmTwqayuRkmbL-U4xJphHIwadE71sF_DuuP6k6-NRRenrnAVgjJjm0g26-kll75E_y43wsAY7rg\",\"openid\":\"o5xcyt5xiKMfXDeO16ZSZN-R2mcE\",\"scope\":\"snsapi_login\",\"unionid\":\"oZoefuAs2fCIZrjO7kAtiJ3yQC6Q\",\"nickname\":\"远哥\"}",
-    "url": "",
-    "userId": 333779440,
-    "id": 2966601863,
-    "type": 10
-  }],
+  "bindings": [
+    {
+      "expiresIn": 2147483647,
+      "refreshTime": 1476625733,
+      "expired": false,
+      "tokenJsonStr": "{\"countrycode\":\"\",\"cellphone\":\"15800651893\",\"hasPassword\":true}",
+      "url": "",
+      "userId": 333779440,
+      "id": 2910254411,
+      "type": 1
+    }, {
+      "expiresIn": 604799,
+      "refreshTime": 1485077072,
+      "expired": true,
+      "tokenJsonStr": "{\"access_token\":\"e317002db301e4f4a94500891905aedc\",\"douban_user_id\":\"145986143\",\"refresh_token\":\"3464b8e48f8e22dc9d2e2aadaeaa6894\",\"douban_user_name\":\"Hello World\",\"expires_in\":604799}",
+      "url": "http://www.douban.com/people/145986143",
+      "userId": 333779440,
+      "id": 2966606805,
+      "type": 3
+    }, {
+      "expiresIn": 7776000,
+      "refreshTime": 1479447752,
+      "expired": true,
+      "tokenJsonStr": "{\"access_token\":\"F880EB270279287FB503388EC54DFA68\",\"refresh_token\":\"1A524FDB7EF82BC993265D061CF5F3BE\",\"openid\":\"B3E86535F0863965E86C7F30472CF7CB\",\"nickname\":\"莲安东路的日子\",\"expires_in\":7776000}",
+      "url": "",
+      "userId": 333779440,
+      "id": 2899342281,
+      "type": 5
+    }, {
+      "expiresIn": 7200,
+      "refreshTime": 1511751872,
+      "expired": true,
+      "tokenJsonStr": "{\"access_token\":\"4_s_0aHlMToYBCzATe_xgdZ3O4kRnaF2ZsIA_dymGeacy59q3fiyEfnTVELdRcJn77cVu649TKn8Z4qYlMIWIttQ\",\"expires_in\":7200,\"refresh_token\":\"4_wekvtGHjZByXmTwqayuRkmbL-U4xJphHIwadE71sF_DuuP6k6-NRRenrnAVgjJjm0g26-kll75E_y43wsAY7rg\",\"openid\":\"o5xcyt5xiKMfXDeO16ZSZN-R2mcE\",\"scope\":\"snsapi_login\",\"unionid\":\"oZoefuAs2fCIZrjO7kAtiJ3yQC6Q\",\"nickname\":\"远哥\"}",
+      "url": "",
+      "userId": 333779440,
+      "id": 2966601863,
+      "type": 10
+    }],
   "adValid": true,
   "code": 200,
   "createTime": 1474036105055,

@@ -20,7 +20,7 @@
       background: rgb(212, 60, 62);
       border-radius: 50%;
       text-align: center;
-      &.active {
+      &:active {
         background: rgb(154, 21, 26);
       }
     }
@@ -67,7 +67,7 @@
           height: 4px;
           border-radius: 50%;
         }
-        &.active {
+        &:active {
           background: rgb(229, 229, 229);
         }
         .icon-loading {
@@ -135,6 +135,9 @@
             border-radius: 50%;
             box-shadow: 0 0 3px rgba(89, 91, 102, 0.5);
             z-index: 20;
+            &:active {
+              background: rgb(229, 229, 229);
+            }
           }
           &-line {
             position: absolute;

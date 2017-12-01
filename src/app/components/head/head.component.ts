@@ -9,6 +9,7 @@ import { State } from '../../store/index';
 })
 export class HeadComponent implements OnInit {
   detail: any;
+  userDetailVisible = false;
 
   constructor(private store: Store<State>) {
     this.store.select('user').subscribe((userState: any) => {

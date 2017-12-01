@@ -25,6 +25,7 @@ import { MyRadioComponent } from './pages/my-radio/my-radio.component';
 import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
 import { MyMusicComponent } from './pages/my-music/my-music.component';
 import { InitAppComponent } from './pages/init-app/init-app.component';
+import { SettingComponent } from './pages/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { InitAppComponent } from './pages/init-app/init-app.component';
     MyRadioComponent,
     SongSheetComponent,
     MyMusicComponent,
-    InitAppComponent
+    InitAppComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
@@ -52,4 +54,5 @@ import { InitAppComponent } from './pages/init-app/init-app.component';
   providers: [ElectronService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

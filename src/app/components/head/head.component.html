@@ -1,44 +1,49 @@
 <div class="head">
   <div class="head-bar">
     <div class="head-bar-controls">
-      <span class="control icon-close"></span>
-      <span class="control icon-mini"></span>
-      <span class="control icon-expand"></span>
+      <span class="topbar-icon icon-close"></span>
+      <span class="topbar-icon icon-mini"></span>
+      <span class="topbar-icon icon-expand"></span>
     </div>
     <div class="head-bar-scale">
-      <span class="control icon-max"></span>
+      <span class="topbar-icon icon-scale"></span>
     </div>
   </div>
   <div class="head-content clearfix">
-    <a class="head-logo" routerLink="/"></a>
-    <div class="head-navi"></div>
+    <a class="topbar-icon icon-logo" routerLink="/"></a>
+    <div class="head-navi">
+      <i class="topbar-icon icon-prev"></i>
+      <i class="topbar-icon icon-next"></i>
+    </div>
     <div class="head-search">
-      <span class="icon-search"></span>
+      <span class="topbar-icon icon-search"></span>
       <input type="text" placeholder="搜索音乐、歌手、歌词、用户">
     </div>
 
     <div class="head-user">
-      <img class="head-user-avatar" [src]="detail?.profile?.avatarUrl" alt="">
-      <i class="icon-dropdown"></i>
+      <div class="head-user-inner" (click)="userDetailVisible=!userDetailVisible">
+        <img class="head-user-avatar" [src]="detail?.profile?.avatarUrl" alt="">
+        <i class="topbar-icon icon-dropdown"></i>
+      </div>
 
       <!--用户详细信息-->
-      <div class="head-user-detail">
+      <div *ngIf="userDetailVisible" class="head-user-detail">
         <div class="detail-profile">
           <img [src]="detail?.profile?.avatarUrl" alt="">
           <!--<img src="../../../assets/imgs/default_avatar.jpg" alt="">-->
-          <span class="hide-one">远哥碉堡了</span>
+          <span class="hide-one" [title]="detail?.profile?.nickname">{{detail?.profile?.nickname}}</span>
         </div>
         <div class="detail-follows clearfix">
           <div class="detail-follows-item">
-            <p><b>0</b></p>
+            <p><b>{{detail?.profile?.eventCount}}</b></p>
             <p>动态</p>
           </div>
           <div class="detail-follows-item">
-            <p><b>9</b></p>
+            <p><b>{{detail?.profile?.follows}}</b></p>
             <p>关注</p>
           </div>
           <div class="detail-follows-item">
-            <p><b>11</b></p>
+            <p><b>{{detail?.profile?.followeds}}</b></p>
             <p>粉丝</p>
           </div>
         </div>
@@ -70,8 +75,10 @@
 
     <div class="head-tools">
       <span class="msg-number">1</span>
-      <span class="icon-msg"></span>
-      <span class="icon-setting"></span>
+      <span class="topbar-icon icon-msg"></span>
+      <a routerLink="/setting">
+        <span class="topbar-icon icon-setting"></span>
+      </a>
     </div>
   </div>
 </div>
