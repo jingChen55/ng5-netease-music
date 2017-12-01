@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rank-list.component.scss']
 })
 export class RankListComponent implements OnInit {
+  loading: boolean;
 
-  constructor() { }
+  constructor() {
+    this.loading = false;
+  }
 
   ngOnInit() {
+
   }
 
 }

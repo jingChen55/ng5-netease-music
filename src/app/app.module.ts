@@ -8,7 +8,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared.module';
 
+// 3rd
+import { ClickOutsideModule } from 'ng-click-outside';
+
+// redux
 import { Store, StoreModule } from '@ngrx/store';
 import { reducers, initialState } from './store/index';
 
@@ -25,7 +30,8 @@ import { MyRadioComponent } from './pages/my-radio/my-radio.component';
 import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
 import { MyMusicComponent } from './pages/my-music/my-music.component';
 import { InitAppComponent } from './pages/init-app/init-app.component';
-import { SettingComponent } from './pages/setting/setting.component';
+import { SystemSettingComponent } from './pages/system-setting/system-setting.component';
+import { UserSettingComponent } from './pages/user-setting/user-setting.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +48,16 @@ import { SettingComponent } from './pages/setting/setting.component';
     SongSheetComponent,
     MyMusicComponent,
     InitAppComponent,
-    SettingComponent
+    SystemSettingComponent,
+    UserSettingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    ClickOutsideModule,
+    SharedModule,
     StoreModule.forRoot(reducers, <any>initialState)
   ],
   providers: [ElectronService],

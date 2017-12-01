@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RankListComponent } from './rank-list.component';
+import { SystemSettingComponent } from './system-setting.component';
 
-describe('RankListComponent', () => {
-  let component: RankListComponent;
-  let fixture: ComponentFixture<RankListComponent>;
+describe('SystemSettingComponent', () => {
+  let component: SystemSettingComponent;
+  let fixture: ComponentFixture<SystemSettingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RankListComponent ]
+      declarations: [ SystemSettingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RankListComponent);
+    fixture = TestBed.createComponent(SystemSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

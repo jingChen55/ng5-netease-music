@@ -7,7 +7,7 @@ import { UserService } from '../../services/user.service';
 // 这个组件不输出内容, 仅是集中执行init操作
 @Component({
   selector: 'app-init-app',
-  template: '<span style="display: none"><span>',
+  template: '<app-loading></app-loading><span style="display: none"><span>',
   providers: [UserService]
 })
 export class InitAppComponent implements OnInit {

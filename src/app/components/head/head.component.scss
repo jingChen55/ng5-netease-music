@@ -122,7 +122,6 @@
       margin-left: 15px;
     }
     &-detail {
-      //display: none;
       position: absolute;
       top: 35px;
       left: -211px;
@@ -181,6 +180,8 @@
       &-list {
         padding-top: 2px;
         &-item {
+          display: block;
+          text-decoration: none;
           padding: 0 40px 0 45px;
           position: relative;
           line-height: 32px;

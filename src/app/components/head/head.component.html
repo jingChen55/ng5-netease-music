@@ -20,30 +20,30 @@
       <input type="text" placeholder="搜索音乐、歌手、歌词、用户">
     </div>
 
-    <div class="head-user">
+    <div class="head-user" (clickOutside)="userDetailVisible=false">
       <div class="head-user-inner" (click)="userDetailVisible=!userDetailVisible">
-        <img class="head-user-avatar" [src]="detail?.profile?.avatarUrl" alt="">
+        <img class="head-user-avatar" [src]="detail?.profile.avatarUrl" alt="">
         <i class="topbar-icon icon-dropdown"></i>
       </div>
 
       <!--用户详细信息-->
       <div *ngIf="userDetailVisible" class="head-user-detail">
         <div class="detail-profile">
-          <img [src]="detail?.profile?.avatarUrl" alt="">
+          <img [src]="detail?.profile.avatarUrl" alt="">
           <!--<img src="../../../assets/imgs/default_avatar.jpg" alt="">-->
-          <span class="hide-one" [title]="detail?.profile?.nickname">{{detail?.profile?.nickname}}</span>
+          <span class="hide-one" [title]="detail?.profile.nickname">{{detail?.profile.nickname}}</span>
         </div>
         <div class="detail-follows clearfix">
           <div class="detail-follows-item">
-            <p><b>{{detail?.profile?.eventCount}}</b></p>
+            <p><b>{{detail?.profile.eventCount}}</b></p>
             <p>动态</p>
           </div>
           <div class="detail-follows-item">
-            <p><b>{{detail?.profile?.follows}}</b></p>
+            <p><b>{{detail?.profile.follows}}</b></p>
             <p>关注</p>
           </div>
           <div class="detail-follows-item">
-            <p><b>{{detail?.profile?.followeds}}</b></p>
+            <p><b>{{detail?.profile.followeds}}</b></p>
             <p>粉丝</p>
           </div>
         </div>
@@ -54,11 +54,11 @@
             <span class="detail-tip">未订购</span>
             <i class="user-icon icon-right-arrow"></i>
           </div>
-          <div class="detail-list-item">
+          <a class="detail-list-item" routerLink="/user-setting">
             <i class="user-icon icon-config detail-left-icon"></i>
             <span>个人信息设置</span>
             <i class="user-icon icon-right-arrow"></i>
-          </div>
+          </a>
           <div class="detail-list-item">
             <i class="user-icon icon-phone detail-left-icon"></i>
             <span>绑定社交账号</span>
@@ -74,9 +74,9 @@
     </div>
 
     <div class="head-tools">
-      <span class="msg-number">1</span>
+      <span *ngIf="detail && detail.profile.eventCount" class="msg-number">{{detail?.profile.eventCount}}</span>
       <span class="topbar-icon icon-msg"></span>
-      <a routerLink="/setting">
+      <a routerLink="/system-setting">
         <span class="topbar-icon icon-setting"></span>
       </a>
     </div>

@@ -1,0 +1,80 @@
+.rank {
+  height: 100%;
+  width: 100%;
+  &-menu {
+    border-bottom: 1px solid rgb(225, 225, 225);
+    &-item {
+      width: 60px;
+      text-align: center;
+      line-height: 40px;
+      display: inline-block;
+      font-size: 14px;
+      color: rgb(102, 102, 102);
+      margin-right: 30px;
+      &.active {
+        font-size: 20px;
+        color: rgb(50, 50, 50);
+        border-bottom: 3px solid rgb(225, 225, 225);
+      }
+    }
+  }
+  &-body {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    &.row {
+      margin: 0 -7px;
+      .col-sm-4 {
+        padding: 0 7px;
+      }
+    }
+  }
+  .netease-panel {
+    $greyBorder: 1px solid rgb(236, 236, 236);
+
+    width: 100%;
+    border-left: $greyBorder;
+    border-right: $greyBorder;
+    margin-right: 14px;
+    margin-top: 20px;
+    &-head {
+      border: 1px solid transparent;
+      &:before {
+        background: url('../../../../assets/imgs/rank_txt.png') no-repeat;
+        background-size: 125px 310px;
+      }
+      &.rank-rise:before {
+        background-position: -3px -4px;
+        width: 114px;
+        height: 49px;
+      }
+      &.rank-new {
+
+      }
+      &.rank-original {
+
+      }
+      &.rank-hot {
+
+      }
+      &.rank-elec {
+
+      }
+    }
+    &-body {
+      &-item {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-foot {
+      border: $greyBorder;
+      border-top: none;
+    }
+  }
+}

@@ -7,7 +7,8 @@ import { PersonalFmComponent } from './pages/personal-fm/personal-fm.component';
 import { FriendsComponent } from './pages/friends/friends.component';
 import { SongSheetComponent } from './pages/song-sheet/song-sheet.component';
 import { MyMusicComponent } from './pages/my-music/my-music.component';
-import { SettingComponent } from './pages/setting/setting.component';
+import { SystemSettingComponent } from './pages/system-setting/system-setting.component';
+import { UserSettingComponent } from './pages/user-setting/user-setting.component';
 
 const routes: Routes = [
   {
@@ -44,8 +45,12 @@ const routes: Routes = [
         component: MyMusicComponent
       },
       {
-        path: 'setting',
-        component: SettingComponent
+        path: 'system-setting',
+        component: SystemSettingComponent
+      },
+      {
+        path: 'user-setting',
+        component: UserSettingComponent
       }
     ]
   }

@@ -14,7 +14,6 @@ export class HeadComponent implements OnInit {
   constructor(private store: Store<State>) {
     this.store.select('user').subscribe((userState: any) => {
       if (userState) {
-        console.log(111, userState);
         this.detail = userState.userDetail;
       }
     });
