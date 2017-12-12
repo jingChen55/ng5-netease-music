@@ -3,4 +3,4 @@
 占位填坑..
 
 ## 预览:
-![](./docs/assets/1.png)
+![](./docs/assets/preview1.png)
